@@ -4,11 +4,17 @@
     {
         static void Main(string[] args)
         {
-            for (int i = 1; i <=50 ; i++)
+            int final;
+
+            Console.WriteLine("Digite um número: ");
+            final = Convert.ToInt32(Console.ReadLine());
+
+
+            for (int i = 1; i <= final ; i++)
             {
                 if (i % 2 == 0)
                 {
-                    Console.WriteLine(i);
+                    Console.Write("{0},", i);
                 }
             }
         }
