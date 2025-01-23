@@ -4,14 +4,21 @@
     {
         static void Main(string[] args)
         {
+            int soma, quant;
+
+            soma = quant = 0;
+
+         
             for (int i = 0; i<=500; i++)
             {
                 if(i % 3== 0)
                 {
-                    Console.Write("{0}, ", i);
+                    soma += i;
+                    quant++;
                 }
                 
             }
+            Console.Write("A soma dos valores informados é:{1}.", quant, soma);
         }
     }
 }
