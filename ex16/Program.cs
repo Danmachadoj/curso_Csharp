@@ -7,7 +7,7 @@
             string genero;
 
             Console.Write("Digite o gênero: ");
-            genero = Console.ReadLine();
+            genero = Console.ReadLine().ToUpper ();
 
             while (genero != "F" && genero != "M")
             {
