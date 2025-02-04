@@ -10,6 +10,15 @@
             Escrever("Agora é sua vez de personalizar a contagem!");
             Console.Write("Digite o início: ");
             int ini = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine();
+            Console.Write("Digite o fim: ");
+            int fim = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine();
+            Console.Write("Digite o passo: ");
+            int passo = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine();
+
+            Contador(ini, fim, passo);
 
         }
 
@@ -17,6 +26,11 @@
         {
             Escrever($"Contagem de {inicio} até {fim} de {passo} em {passo}");
             Thread.Sleep(2000);
+
+            if (passo < 0)
+            {
+                passo *= -1;
+            }
 
             if (inicio < fim)
             {
@@ -42,15 +56,17 @@
                 Console.WriteLine("Fim!");
             }
 
-            static void Escrever(string texto)
-            {
-                int tam = texto.Length + 4;
-                string linha = new('*', tam);
-                string textoCentralizado = texto.PadLeft(tam - 2).PadRight(tam - 2);
-                Console.WriteLine(linha);
-                Console.WriteLine(textoCentralizado);
-                Console.WriteLine(linha);
-            }
+            
+        }
+
+        static void Escrever(string texto)
+        {
+            int tam = texto.Length + 4;
+            string linha = new('*', tam);
+            string textoCentralizado = texto.PadLeft(tam - 2).PadRight(tam - 2);
+            Console.WriteLine(linha);
+            Console.WriteLine(textoCentralizado);
+            Console.WriteLine(linha);
         }
     }
 }
