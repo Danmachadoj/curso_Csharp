@@ -4,10 +4,10 @@
     {
         static void Main(string[] args)
         {
-            Console.Write("Digite seu peso: ");
+            Console.Write("Digite seu peso (kg): ");
             double peso = Convert.ToDouble(Console.ReadLine());
 
-            Console.Write("Digite sua altura: ");
+            Console.Write("Digite sua altura (m): ");
             double altura = Convert.ToDouble(Console.ReadLine());
 
             double imc = peso / (altura * altura);
